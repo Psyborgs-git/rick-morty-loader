@@ -19,6 +19,8 @@ html {
     transform: translate(-50%, -50%);
     object-fit: cover;
     aspect-ratio: 1/1;
+    filter: hue-rotate(0deg);
+    transition: filter 0.3s;
 }
 
 .ep1 {

@@ -17,11 +17,16 @@ window.addEventListener("DOMContentLoaded", () => {
 		const maxDistance = eyeRect.width / 3;
 		const pupilX = Math.cos(angle) * maxDistance;
 		const pupilY = Math.sin(angle) * maxDistance;
+		const hue = Math.floor(pupilY * pupilX * 360);
 
-		// eye.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
 		pupils.forEach((pupil) => {
 			pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
 		});
-		// });
+		rickAndMorty.style.filter = `hue-rotate(${hue}deg)`;
 	});
+
+	// setInterval(() => {
+	// 	const hue = Math.floor(Math.random() * 360);
+	// 	rickAndMorty.style.filter = `hue-rotate(${hue}deg)`;
+	// }, 270);
 });
