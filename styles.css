@@ -6,10 +6,27 @@ html {
     align-items: center;
     justify-content: center;
     background-color: #000;
+    color: #fff;
+}
+
+
+#root {
+    width: 90vw;
+    height: 90vh;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #container {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #rick-and-morty {
@@ -71,4 +88,50 @@ html {
 
 .p2 {
     background-color: aqua;
+}
+
+
+.loading-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #0077B5;
+    margin-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loadingAnimation 2s linear infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.text {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.text:hover {
+    opacity: 1;
 }

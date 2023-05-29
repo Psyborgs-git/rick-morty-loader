@@ -17,20 +17,35 @@
     <script defer src="tracker.js"></script>
 </head>
 <body>
-    <div id="container">
-        <img id="rick-and-morty" src="rick-and-morty.png" alt="Rick and Morty">
-        <div class="eye ep1" >
-            <div class="pupil p1"></div>
+    <div id="root">
+        
+      <div class="text">
+            <h1>Mouse Tracker</h1>
+            <p>Move your mouse around the screen to see the pupils follow it.</p>
         </div>
-        <div class="eye ep2" >
-            <div class="pupil p2"></div>
+
+        <div id="container">
+
+            <img id="rick-and-morty" src="rick-and-morty.png" alt="Rick and Morty">
+            <div class="eye ep1" >
+                <div class="pupil p1"></div>
+            </div>
+            <div class="eye ep2" >
+                <div class="pupil p2"></div>
+            </div>
+            <div class="eye ep3" >
+                <div class="pupil p1"></div>
+            </div>
+            <div class="eye ep4" >
+                <div class="pupil p2"></div>
+            </div>
+
         </div>
-        <div class="eye ep3" >
-            <div class="pupil p1"></div>
+
+        <div class="loading-bar">
+            <div class="progress-bar"></div>
         </div>
-        <div class="eye ep4" >
-            <div class="pupil p2"></div>
-        </div>
+
     </div>
 </body>
 </html>
